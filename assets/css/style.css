@@ -1,0 +1,14 @@
+.tp-header-menu ul li a {
+    display: inline-block;
+    font-size: 17px;
+    font-weight: 600;
+    color: #ffffff !important;
+    padding: 17.5px 0;
+    line-height: 1.5;
+    position: relative;
+    line-height: 1;
+    transform: translateY(-2px);
+}
+.header-sticky .tp-header-menu ul li a{
+color: var(--tp-theme-color) !important;
+}
