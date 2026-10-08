@@ -10,5 +10,61 @@
     transform: translateY(-2px);
 }
 .header-sticky .tp-header-menu ul li a{
-color: var(--tp-theme-color) !important;
+color: whiite !important;
+}
+.header-sticky
+{
+    background: var(--tp-theme-color) !important;
+}
+section.tp-choose-area.tp-choose-spacing-3.fix {
+    background: #f5f5f5 !important;
+}
+.tp-header-cta-button .tp-btn-border {
+    background-color: transparent;
+    border: 1px solid #ffffff !important;
+    color: #ffffff !important;
+}
+.tp-cta-phone.tp-header-cta-phone.mr-30.d-none.d-xl-inline-block samp {
+    color: #ffff;
+}
+.header-sticky .tp-cta-phone-icon {
+    width: 52px;
+    height: 52px;
+    background-color: #ffffff;
+    color: #000000;
+    text-align: center;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header-sticky .tp-btn-icon::before {
+    position: absolute;
+    content: "";
+    background-color: #ffffff;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+.header-sticky .tp-btn-icon path {
+   
+stroke: #000000 !important;
+}
+.tpservshow.hover.mb-30.active p {
+    color: #ffff;
+}
+.tp-wcu-card:hover .tp-wcu-icon-box .fill-svg path {
+    fill: #cda85a !important;
+}
+ul.sub-menu li a
+{
+    color: #000000 !important;
 }
