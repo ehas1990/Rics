@@ -68,3 +68,13 @@ ul.sub-menu li a
 {
     color: #000000 !important;
 }
+img.webgbl-logo {
+    min-width: 120px;
+    width: 85px;
+}
+h4#col4
+{
+    
+    color: rgba(255, 255, 255, 0.65) !important;
+
+}
