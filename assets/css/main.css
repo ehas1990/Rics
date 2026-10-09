@@ -11523,6 +11523,10 @@ body.tp-magic-cursor #magic-cursor {
   padding: 60px;
   padding-top: 54px;
 }
+.tp-error-area .tp-bg {
+    
+    BORDER-RADIUS: 0px !important; ;
+}
 @media (max-width: 574.98px), only screen and (min-width: 576px) and (max-width: 767.98px) {
   .tp-error {
     padding: 30px;
@@ -11531,7 +11535,7 @@ body.tp-magic-cursor #magic-cursor {
   }
 }
 .tp-error-gap {
-  margin: 30px 0;
+  margin: 0px 0 !important;
 }
 .tp-error-main {
   min-height: 930px;

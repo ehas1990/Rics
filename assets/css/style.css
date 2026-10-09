@@ -78,3 +78,34 @@ h4#col4
     color: rgba(255, 255, 255, 0.65) !important;
 
 }
+
+/* Footer SEO Keyword Links */
+.footer-seo-links {
+    margin-top: 15px;
+    margin-bottom: 0;
+    font-size: 13.5px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.55) !important;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.footer-seo-links a {
+    color: rgba(255, 255, 255, 0.75);
+    font-weight: 400;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-seo-links a:hover {
+    color: var(--tp-secoundery-color, #cda85a);
+    text-decoration: underline;
+}
+
+@media (max-width: 767.98px) {
+    .footer-seo-links {
+        margin-top: 12px;
+        font-size: 12.5px;
+        line-height: 1.7;
+    }
+}
