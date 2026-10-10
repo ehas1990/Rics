@@ -4756,11 +4756,11 @@ body.tp-magic-cursor #magic-cursor {
   }
 }
 .tp-hero-banner-area {
-  padding-top: 170px;
+  padding-top: 80px;
 }
 @media (max-width: 574.98px), only screen and (min-width: 576px) and (max-width: 767.98px) {
   .tp-hero-banner-area {
-    padding-top: 140px;
+    padding-top: 40px;
     padding-bottom: 40px;
   }
 }
@@ -5522,21 +5522,21 @@ body.tp-magic-cursor #magic-cursor {
   }
 }
 .tp-about-spacing-3 {
-  padding: 145px 0;
+  padding: 80px 0;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
   .tp-about-spacing-3 {
-    padding: 120px 0;
+    padding: 80px 0;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .tp-about-spacing-3 {
-    padding: 100px 0;
+    padding: 50px 0;
   }
 }
 @media (max-width: 574.98px), only screen and (min-width: 576px) and (max-width: 767.98px) {
   .tp-about-spacing-3 {
-    padding: 80px 0;
+    padding: 30px 0;
     border-radius: 0;
   }
 }
@@ -7592,22 +7592,22 @@ body.tp-magic-cursor #magic-cursor {
 /*  7.8 Service Css Here
 /*----------------------------------------*/
 .tp-services-spacing {
-  padding: 145px 0;
+  padding:80px 0;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
   .tp-services-spacing {
-    padding: 120px 0;
+    padding: 80px 0;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .tp-services-spacing {
-    padding: 100px 0;
+    padding: 80px 0;
     padding-bottom: 80px;
   }
 }
 @media (max-width: 574.98px), only screen and (min-width: 576px) and (max-width: 767.98px) {
   .tp-services-spacing {
-    padding: 70px 0;
+    padding: 30px 0;
   }
 }
 .tp-services-spacing-2 {
