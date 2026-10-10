@@ -427,3 +427,6 @@ html {
         gap: 14px;
     }
 }
+p {
+    letter-spacing: 1.59px;
+}
