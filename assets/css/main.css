@@ -4763,6 +4763,9 @@ body.tp-magic-cursor #magic-cursor {
     padding-top: 40px;
     padding-bottom: 40px;
   }
+  section#why-choose-us {
+    margin-top: -30px !important;
+}
 }
 .tp-hero-agents-img {
   display: flex;
