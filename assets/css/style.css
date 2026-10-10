@@ -109,3 +109,321 @@ h4#col4
         line-height: 1.7;
     }
 }
+
+/* ==========================================================
+   Section-Specific: About Section Two-Image Overlapping Layout
+   ========================================================== */
+.tp-about-two-img-wrap {
+    position: relative;
+    width: 100%;
+    padding-top: 18px;
+    padding-left: 10px;
+}
+
+.tp-about-main-item {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #1a1a1a;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.tp-about-main-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 22px 45px rgba(0, 0, 0, 0.65);
+}
+
+.tp-about-main-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.tp-about-main-item:hover .tp-about-main-img {
+    transform: scale(1.04);
+}
+
+.tp-about-sub-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 220px;
+    height: 160px;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #1a1a1a;
+    border: 3px solid #000;
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.7);
+    z-index: 4;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.tp-about-sub-item:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.85);
+}
+
+.tp-about-sub-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.tp-about-sub-item:hover .tp-about-sub-img {
+    transform: scale(1.05);
+}
+
+.pl-lg-30 {
+    padding-left: 30px;
+}
+
+@media (min-width: 1400px) {
+    .tp-about-main-item {
+        height: 520px;
+    }
+    .tp-about-sub-item {
+        width: 240px;
+        height: 175px;
+    }
+}
+
+@media (max-width: 1199.98px) and (min-width: 992px) {
+    .tp-about-main-item {
+        height: 460px;
+    }
+    .tp-about-sub-item {
+        width: 200px;
+        height: 145px;
+    }
+    .pl-lg-30 {
+        padding-left: 15px;
+    }
+}
+
+@media (max-width: 991.98px) and (min-width: 768px) {
+    .tp-about-two-img-wrap {
+        max-width: 620px;
+        margin: 0 auto 45px;
+        padding-top: 14px;
+        padding-left: 0;
+    }
+    .tp-about-main-item {
+        height: 380px;
+    }
+    .tp-about-sub-item {
+        width: 190px;
+        height: 135px;
+        left: 10px;
+    }
+    .pl-lg-30 {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .tp-about-two-img-wrap {
+        margin-bottom: 40px;
+        padding-top: 12px;
+        padding-left: 0;
+    }
+    .tp-about-main-item {
+        height: 300px;
+    }
+    .tp-about-sub-item {
+        width: 150px;
+        height: 110px;
+        left: 8px;
+        border-width: 2px;
+    }
+    .pl-lg-30 {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .tp-about-main-item {
+        height: 240px;
+        border-radius: 12px;
+    }
+    .tp-about-sub-item {
+        width: 130px;
+        height: 95px;
+        left: 6px;
+        border-radius: 10px;
+    }
+}
+
+/* ==========================================================
+   Universal Smooth Anchor Navigation & Header Offset
+   ========================================================== */
+html {
+    scroll-behavior: smooth;
+}
+
+[id] {
+    scroll-margin-top: 110px;
+}
+
+.tp-section-anchor {
+    position: relative;
+    top: -110px;
+    display: block;
+    height: 0;
+    width: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/* ==========================================================
+   Section-Specific: Contact Page Two-Card Layout
+   ========================================================== */
+.tp-contact-cards-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tp-contact-card-box {
+    border-radius: 16px;
+    padding: 34px 30px;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+}
+
+/* Card 1 – Normal state (bordered white) */
+.tp-contact-card-normal {
+    background-color: #ffffff;
+    border: 1px solid #e7e8ec;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+/* Card 2 – Highlighted state (light-grey background) */
+.tp-contact-card-highlight {
+    background-color:#ffffff ;
+    border: 1px solid #e9eaee;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+.tp-contact-card-normal:hover,.tp-contact-card-highlight:hover {
+    background-color: #f3f4f6;
+    border: 1px solid #e9eaee;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+.tp-contact-card-inner {
+    display: flex;
+    align-items: flex-start;
+    gap: 22px;
+    width: 100%;
+}
+
+.tp-contact-card-icon-wrap {
+    flex-shrink: 0;
+}
+
+.tp-contact-card-icon {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.tp-contact-card-normal .tp-contact-card-icon {
+    background: #f8f9fa;
+    border: 1px solid #eaeaea;
+}
+
+.tp-contact-card-highlight .tp-contact-card-icon {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.tp-contact-card-info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.tp-contact-card-subtitle {
+    font-size: 14px;
+    font-weight: 500;
+    color: #6c727f;
+    line-height: 1.2;
+    margin-bottom: 8px;
+    display: inline-block;
+}
+
+.tp-contact-card-title {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.6;
+    color: #1a1d24;
+    margin: 0;
+}
+
+.tp-contact-card-title a {
+    color: inherit;
+    transition: color 0.25s ease;
+}
+
+.tp-contact-card-title a:hover {
+    color: var(--tp-orange-color, #e6641c);
+}
+
+.tp-contact-card-sub-item {
+    margin-top: 18px;
+    padding-top: 16px;
+    border-top: 1px dashed rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 991.98px) and (min-width: 768px) {
+    .tp-contact-card-box {
+        padding: 26px 22px;
+    }
+    .tp-contact-card-inner {
+        gap: 16px;
+    }
+    .tp-contact-card-icon {
+        width: 48px;
+        height: 48px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .tp-contact-card-box {
+        padding: 24px 20px;
+    }
+    .tp-contact-card-inner {
+        gap: 16px;
+    }
+    .tp-contact-card-icon {
+        width: 46px;
+        height: 46px;
+    }
+    .tp-contact-card-title {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tp-contact-card-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+    }
+}

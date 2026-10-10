@@ -7,16 +7,100 @@
 		$("#loading").fadeOut(500);
 	});
 
-	// 17. scroll wrapper //
+	// 17. scroll wrapper & anchor navigation //
 	gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin, SplitText);
-	if($('#smooth-wrapper').length && $('#smooth-content').length){
-		ScrollSmoother.create({
+	let smootherInstance = null;
+	if ($('#smooth-wrapper').length && $('#smooth-content').length) {
+		smootherInstance = ScrollSmoother.create({
 			smooth: .5,
 			effects: true,
 			smoothTouch: .1,
 			ignoreMobileResize: true
-		})
+		});
 	}
+
+	// Helper function for reliable smooth scrolling to section anchors
+	function scrollToTargetElement(targetSelector, isSmooth) {
+		if (!targetSelector) return;
+		let $target = $(targetSelector);
+		// Alias check: #services -> #ricslevel1 or #services
+		if (!$target.length && targetSelector === '#services') {
+			$target = $('#ricslevel1');
+		} else if (!$target.length && targetSelector === '#ricslevel1') {
+			$target = $('#services');
+		}
+		if (!$target.length) return;
+
+		let headerHeight = $('#header-sticky').outerHeight() || 80;
+		let smoother = (typeof ScrollSmoother !== "undefined") ? ScrollSmoother.get() : null;
+
+		if (smoother) {
+			smoother.scrollTo($target[0], isSmooth !== false, "top " + (headerHeight + 20) + "px");
+		} else {
+			let targetOffset = $target.offset().top - headerHeight - 20;
+			if (isSmooth !== false) {
+				$('html, body').stop().animate({
+					scrollTop: Math.max(0, targetOffset)
+				}, 600, 'swing');
+			} else {
+				$('html, body').scrollTop(Math.max(0, targetOffset));
+			}
+		}
+
+		// Ensure ScrollTrigger updates after scroll
+		setTimeout(function () {
+			if (typeof ScrollTrigger !== "undefined") {
+				ScrollTrigger.refresh();
+			}
+		}, 650);
+	}
+
+	// Smooth scrolling for all internal anchor links across pages
+	$(document).on('click', 'a[href*="#"]', function (e) {
+		let href = $(this).attr('href');
+		if (!href || href === '#' || href === '#!' || href.startsWith('#collapse') || href.startsWith('#hiw-collapse')) {
+			return;
+		}
+
+		let currentPath = window.location.pathname.split('/').pop() || 'index.html';
+		let urlParts = href.split('#');
+		let targetPath = urlParts[0].split('/').pop();
+		let targetHash = '#' + urlParts[1];
+
+		// If link is on current page or relative anchor
+		if (!targetPath || targetPath === currentPath || (currentPath === '' && targetPath === 'index.html') || (currentPath === 'index.html' && targetPath === '')) {
+			let $target = $(targetHash);
+			if (!$target.length && targetHash === '#services') $target = $('#ricslevel1');
+			if (!$target.length && targetHash === '#ricslevel1') $target = $('#services');
+
+			if ($target.length) {
+				e.preventDefault();
+
+				// Close offcanvas menu if open
+				$(".tp-offcanvas").removeClass("tp-offcanvas-open");
+				$(".tp-offcanvas-overlay").removeClass("tp-offcanvas-overlay-open");
+
+				scrollToTargetElement(targetHash, true);
+
+				if (history.pushState) {
+					history.pushState(null, null, targetHash);
+				} else {
+					window.location.hash = targetHash;
+				}
+			}
+		}
+	});
+
+	// Handle initial URL hash on page load / reload
+	windowOn.on('load', function () {
+		if (window.location.hash) {
+			let initialHash = window.location.hash;
+			setTimeout(function () {
+				scrollToTargetElement(initialHash, true);
+			}, 350);
+		}
+	});
+
     // media selection
     var mm = gsap.matchMedia();
 
