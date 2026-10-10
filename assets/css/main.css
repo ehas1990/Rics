@@ -7617,17 +7617,29 @@ body.tp-magic-cursor #magic-cursor {
   padding-top:80px;
   padding-bottom:80px;
 }
+body#body-level .tp-services-spacing-2 {
+  margin-top: -80px;
+}
+
 @media only screen and (min-width: 992px) and (max-width: 1199.98px), only screen and (min-width: 768px) and (max-width: 991.98px) {
   .tp-services-spacing-2 {
     padding-top:80px;
     padding-bottom:80px;
   }
+  body#body-level .tp-services-spacing-2 {
+  margin-top: -80px;
+}
+
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px), (max-width: 574.98px) {
   .tp-services-spacing-2 {
     padding-top:50px;
     padding-bottom:50px;
   }
+  body#body-level .tp-services-spacing-2 {
+  margin-top: -50px;
+}
+
 }
 .tp-services-spacing-3 {
   padding-bottom: 115px;
