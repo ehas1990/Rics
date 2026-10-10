@@ -9754,6 +9754,7 @@ body.tp-magic-cursor #magic-cursor {
   .tp-testimonail-spacing-2 {
     padding-top: 50px;
     padding-bottom: 50px;
+    margin-top: -50px !important;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
