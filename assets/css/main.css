@@ -96,8 +96,8 @@
 :root {
   --tp-theme-font: "Inter Tight", sans-serif;
   --tp-playfair-font: "Roboto Condensed", sans-serif;
-  --tp-poppins-font: "Poppins", sans-serif;
-  --tp-sora-font: "Sora", sans-serif;
+  --tp-poppins-font: "Inter Tight", sans-serif;
+  --tp-sora-font: "Roboto Condensed", sans-serif;
 }
 
 * {
