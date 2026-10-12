@@ -77,6 +77,10 @@
 /*  1.1 Theme Default
 /*----------------------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@400;500;600;700;800&family=Sora:wght@100..800&display=swap");
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root {
   --tp-theme-color: #000000;
   --tp-secoundery-color:#cda85a;;
@@ -87,7 +91,7 @@
 }
 
 :root {
-  --tp-theme-font: "Manrope", sans-serif;
+  --tp-theme-font: "Inter Tight", sans-serif;
   --tp-playfair-font: "Playfair Display", serif;
   --tp-poppins-font: "Poppins", sans-serif;
   --tp-sora-font: "Sora", sans-serif;
@@ -3454,18 +3458,19 @@ body.tp-magic-cursor #magic-cursor {
   }
 }
 .tp-footer-info-deg {
-  font-size: 24px;
+  font-size:17px;
   letter-spacing: -0.01em;
   font-weight: 500;
+  color: #FFFFFF;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199.98px), only screen and (min-width: 768px) and (max-width: 991.98px) {
   .tp-footer-info-deg {
-    font-size: 20px;
+    font-size: 17px;
   }
 }
 @media (max-width: 574.98px), only screen and (min-width: 576px) and (max-width: 767.98px) {
   .tp-footer-info-deg {
-    font-size: 18px;
+    font-size: 17px;
   }
 }
 .tp-footer-info-deg a {
