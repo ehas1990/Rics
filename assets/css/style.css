@@ -427,3 +427,40 @@ html {
         gap: 14px;
     }
 }
+
+/* ==========================================================================
+   Mobile Footer Responsive Layout (Side-by-side Quick Links & Services, Full-width Contact below)
+   ========================================================================== */
+@media (max-width: 767.98px) {
+    .tp-footer-wrap .row > div:nth-child(1),
+    .tp-footer-wrap .row > div:nth-child(2) {
+        width: 50% !important;
+        flex: 0 0 50% !important;
+        max-width: 50% !important;
+    }
+
+    .tp-footer-wrap .row > div:nth-child(3) {
+        width: 100% !important;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+
+    .tp-footer-wrap .tp-footer-widgets {
+        margin-bottom: 30px;
+    }
+
+    .tp-footer-wrap .tp-footer-widgets ul {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 574.98px) {
+    .tp-footer-wrap .row {
+        --bs-gutter-x: 20px;
+    }
+
+    .tp-footer-wrap .tp-footer-widgets-title {
+        margin-bottom: 18px;
+    }
+}
+
