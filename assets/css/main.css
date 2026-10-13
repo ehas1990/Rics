@@ -5457,17 +5457,20 @@ body.tp-magic-cursor #magic-cursor {
   .tp-about-deg {
     padding-bottom: 30px;
     margin-bottom: 20px;
+    padding-top: 50px;
   }
 }
 @media (max-width: 574.98px), only screen and (min-width: 576px) and (max-width: 767.98px) {
   .tp-about-deg {
     padding-bottom: 20px;
     margin-bottom: 20px;
+    padding-top: 50px;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
   .tp-about-deg p {
     margin-bottom: 15px;
+    
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
