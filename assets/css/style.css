@@ -464,3 +464,646 @@ html {
     }
 }
 
+/* ==========================================================================
+   Hero Section 4-Slide Responsive Slider
+   ========================================================================== */
+.tp-hero-slider-area {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-color: #0b0c10;
+}
+
+.tp-hero-slider-wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 860px;
+    overflow: hidden;
+}
+
+@media (min-width: 1600px) {
+    .tp-hero-slider-wrapper {
+        min-height: 890px;
+    }
+}
+
+@media (max-width: 1399.98px) and (min-width: 1200px) {
+    .tp-hero-slider-wrapper {
+        min-height: 800px;
+    }
+}
+
+@media (max-width: 1199.98px) and (min-width: 992px) {
+    .tp-hero-slider-wrapper {
+        min-height: 720px;
+    }
+}
+
+@media (max-width: 991.98px) and (min-width: 768px) {
+    .tp-hero-slider-wrapper {
+        min-height: 640px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .tp-hero-slider-wrapper {
+        min-height: 560px;
+    }
+}
+
+/* Individual Slide */
+.tp-hero-slide {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 1;
+    transition: opacity 0.85s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.85s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+}
+
+.tp-hero-slide.is-active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    z-index: 2;
+}
+
+/* Slide background & dark overlay */
+.tp-hero-slide-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    z-index: 1;
+    transform: scale(1.04);
+    transition: transform 6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.tp-hero-slide.is-active .tp-hero-slide-bg {
+    transform: scale(1);
+}
+
+.tp-hero-slide-overlay {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        115deg,
+        rgba(0, 0, 0, 0.74) 0%,
+        rgba(0, 0, 0, 0.42) 52%,
+        rgba(0, 0, 0, 0.64) 100%
+    );
+    z-index: 2;
+}
+
+/* Slide container & layout */
+.tp-hero-slide-container {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    padding-top: 195px;
+    padding-bottom: 95px;
+}
+
+@media (max-width: 1199.98px) and (min-width: 992px) {
+    .tp-hero-slide-container {
+        padding-top: 165px;
+        padding-bottom: 75px;
+    }
+}
+
+@media (max-width: 991.98px) and (min-width: 768px) {
+    .tp-hero-slide-container {
+        padding-top: 145px;
+        padding-bottom: 65px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .tp-hero-slide-container {
+        padding-top: 120px;
+        padding-bottom: 50px;
+    }
+}
+
+/* Content animations */
+.tp-hero-slide .tp-hero-deg {
+    font-size: 24px;
+    line-height: 1.45;
+    color: #ffffff;
+    max-width: 540px;
+    font-weight: 500;
+    margin-bottom: 30px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.65s ease 0.15s, transform 0.65s ease 0.15s;
+}
+
+.tp-hero-slide.is-active .tp-hero-deg {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.tp-hero-slide .hero-btn {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.65s ease 0.3s, transform 0.65s ease 0.3s;
+}
+
+.tp-hero-slide.is-active .hero-btn {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.tp-hero-slide .tp-hero-title {
+    letter-spacing: -0.05em;
+    font-size: 105px;
+    line-height: 0.95;
+    font-weight: 800;
+    color: #ffffff;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.65s ease 0.2s, transform 0.65s ease 0.2s;
+}
+
+.tp-hero-slide.is-active .tp-hero-title {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.tp-hero-title-italic {
+    font-style: italic;
+    font-weight: 700;
+    font-size: 80px;
+    letter-spacing: -0.02em;
+    display: block;
+    margin-top: 6px;
+    color: #ffffff;
+    line-height: 1.1;
+}
+
+@media (max-width: 1199.98px) and (min-width: 992px) {
+    .tp-hero-slide .tp-hero-title {
+        font-size: 80px;
+    }
+    .tp-hero-title-italic {
+        font-size: 60px;
+    }
+    .tp-hero-slide .tp-hero-deg {
+        font-size: 21px;
+    }
+}
+
+@media (max-width: 991.98px) and (min-width: 768px) {
+    .tp-hero-slide .tp-hero-title {
+        font-size: 64px;
+        padding-top: 15px;
+    }
+    .tp-hero-title-italic {
+        font-size: 48px;
+    }
+    .tp-hero-slide .tp-hero-deg {
+        font-size: 19px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .tp-hero-slide .tp-hero-title {
+        font-size: 44px;
+        padding-top: 25px;
+        text-align: left;
+    }
+    .tp-hero-title-italic {
+        font-size: 32px;
+        display: inline-block;
+    }
+    .tp-hero-slide .tp-hero-deg {
+        font-size: 17px;
+        line-height: 1.4;
+        margin-bottom: 20px;
+    }
+    .tp-hero-slide .tp-hero {
+        text-align: left !important;
+    }
+}
+
+/* Nav Arrows */
+.tp-hero-nav-btn {
+    position: absolute;
+    top: 52%;
+    transform: translateY(-50%);
+    z-index: 25;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1.5px solid rgba(255, 255, 255, 0.35);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    padding: 0;
+}
+
+.tp-hero-nav-btn:hover {
+    background: #ffffff;
+    color: #101114;
+    border-color: #ffffff;
+    transform: translateY(-50%) scale(1.08);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.tp-hero-nav-btn:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 3px;
+}
+
+.tp-hero-prev {
+    left: 28px;
+}
+
+.tp-hero-next {
+    right: 28px;
+}
+
+@media (max-width: 767.98px) {
+    .tp-hero-nav-btn {
+        width: 40px;
+        height: 40px;
+        top: auto;
+        bottom: 18px;
+        transform: none;
+    }
+    .tp-hero-nav-btn:hover {
+        transform: scale(1.06);
+    }
+    .tp-hero-prev {
+        left: 16px;
+    }
+    .tp-hero-next {
+        right: 16px;
+    }
+}
+
+/* Pagination Dots */
+.tp-hero-pagination {
+    position: absolute;
+    bottom: 28px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 25;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 14px;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.tp-hero-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.45);
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.tp-hero-dot:hover {
+    background: rgba(255, 255, 255, 0.85);
+}
+
+.tp-hero-dot.is-active {
+    width: 32px;
+    background: #ffffff;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+.tp-hero-dot:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;
+}
+
+/* Feature cards container integration */
+.tp-hero-feature-wrap {
+    position: relative;
+    z-index: 5;
+    margin-top: -35px;
+    padding-bottom: 25px;
+}
+
+@media (max-width: 767.98px) {
+    .tp-hero-feature-wrap {
+        margin-top: 15px;
+    }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+    .tp-hero-slide,
+    .tp-hero-slide-bg,
+    .tp-hero-slide .tp-hero-deg,
+    .tp-hero-slide .hero-btn,
+    .tp-hero-slide .tp-hero-title,
+    .tp-hero-dot {
+        transition: none !important;
+        transform: none !important;
+    }
+}
+
+/* ==========================================================================
+   Mobile-Only Fixed Bottom Contact Bar (Call Now | WhatsApp)
+   ========================================================================== */
+
+/* Completely hidden on desktop, laptop, and tablet viewports */
+.mobile-contact-bar {
+    display: none !important;
+}
+
+/* Mobile View Only (max-width: 767px) */
+@media (max-width: 767px) {
+    .mobile-contact-bar {
+        position: fixed !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: stretch !important;
+        background: #0b0f13 !important;
+        z-index: 995 !important;
+        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.28) !important;
+        padding-bottom: env(safe-area-inset-bottom, 0px) !important;
+        border-top: 1px solid rgba(255, 255, 255, 0.12) !important;
+        box-sizing: border-box !important;
+        overflow: hidden !important;
+        margin: 0 !important;
+    }
+
+    .mobile-contact-btn {
+        flex: 1 1 50% !important;
+        width: 50% !important;
+        min-height: 52px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 10px !important;
+        padding: 11px 12px !important;
+        text-decoration: none !important;
+        font-family: var(--tp-theme-font, "Inter Tight", sans-serif) !important;
+        font-size: 15px !important;
+        font-weight: 700 !important;
+        letter-spacing: 0.3px !important;
+        line-height: 1.2 !important;
+        text-align: center !important;
+        box-sizing: border-box !important;
+        transition: background-color 0.2s ease, opacity 0.2s ease, transform 0.1s ease !important;
+        -webkit-tap-highlight-color: transparent !important;
+        user-select: none !important;
+    }
+
+    /* Call Now Button - Brand Luxury Charcoal with Gold Icon Accent */
+    .mobile-call-btn {
+        background-color: #12181f !important;
+        color: #ffffff !important;
+        border-right: 1px solid rgba(255, 255, 255, 0.14) !important;
+    }
+
+    .mobile-call-btn .mobile-contact-icon {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 32px !important;
+        height: 32px !important;
+        border-radius: 50% !important;
+        background: rgba(205, 168, 90, 0.2) !important;
+        color: #cda85a !important;
+        flex-shrink: 0 !important;
+        transition: transform 0.2s ease !important;
+    }
+
+    .mobile-call-btn:hover,
+    .mobile-call-btn:active {
+        background-color: #1c242f !important;
+        color: #ffffff !important;
+    }
+
+    .mobile-call-btn:active .mobile-contact-icon {
+        transform: scale(0.92) !important;
+    }
+
+    /* WhatsApp Button - Authentic WhatsApp Brand Green */
+    .mobile-whatsapp-btn {
+        background-color: #25d366 !important;
+        color: #ffffff !important;
+    }
+
+    .mobile-whatsapp-btn .mobile-contact-icon {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 32px !important;
+        height: 32px !important;
+        border-radius: 50% !important;
+        background: rgba(255, 255, 255, 0.2) !important;
+        color: #ffffff !important;
+        flex-shrink: 0 !important;
+        transition: transform 0.2s ease !important;
+    }
+
+    .mobile-whatsapp-btn:hover,
+    .mobile-whatsapp-btn:active {
+        background-color: #20bd5a !important;
+        color: #ffffff !important;
+    }
+
+    .mobile-whatsapp-btn:active .mobile-contact-icon {
+        transform: scale(0.92) !important;
+    }
+
+    .mobile-contact-icon svg {
+        display: block !important;
+    }
+
+    .mobile-contact-text {
+        display: inline-block !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+    }
+
+    /* Add bottom spacing to mobile page content and footer to prevent overlap */
+    body {
+        padding-bottom: calc(68px + env(safe-area-inset-bottom, 0px)) !important;
+    }
+
+    .footer-copyright {
+        padding-bottom: 12px;
+    }
+
+    /* Adjust back-to-top button on mobile to stay cleanly above the contact bar */
+    .back-to-top-wrapper.back-to-top-btn-show {
+        bottom: calc(72px + env(safe-area-inset-bottom, 0px)) !important;
+    }
+}
+
+/* Explicit reset/hide outside max-width: 767px */
+@media (min-width: 768px) {
+    .mobile-contact-bar {
+        display: none !important;
+    }
+}
+
+/* ==========================================================================
+   Desktop, Laptop & Tablet Floating Contact Icons (Call + WhatsApp)
+   ========================================================================== */
+
+/* Hidden on mobile viewports (max-width: 767px) */
+.desktop-floating-contact {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .desktop-floating-contact {
+        display: none !important;
+    }
+}
+
+/* Visible on tablet, laptop, and desktop viewports (min-width: 768px) */
+@media (min-width: 768px) {
+    .desktop-floating-contact {
+        position: fixed !important;
+        right: 47px !important;
+        bottom: 110px !important;
+        z-index: 990 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 14px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        pointer-events: auto !important;
+    }
+
+    .desktop-floating-btn {
+        position: relative !important;
+        width: 50px !important;
+        height: 50px !important;
+        border-radius: 50% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-decoration: none !important;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25) !important;
+        transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease !important;
+        box-sizing: border-box !important;
+        cursor: pointer !important;
+        user-select: none !important;
+        outline: none !important;
+    }
+
+    /* WhatsApp floating button - Official WhatsApp Green */
+    .desktop-floating-whatsapp {
+        background-color: #25d366 !important;
+        color: #ffffff !important;
+        border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    }
+
+    .desktop-floating-whatsapp:hover {
+        background-color: #20bd5a !important;
+        color: #ffffff !important;
+        transform: translateY(-3px) scale(1.08) !important;
+        box-shadow: 0 12px 28px rgba(37, 211, 102, 0.45) !important;
+    }
+
+    .desktop-floating-whatsapp:active {
+        transform: translateY(-1px) scale(0.98) !important;
+    }
+
+    /* Call floating button - Premium Luxury Slate with Gold Accent */
+    .desktop-floating-call {
+        background-color: #12181f !important;
+        color: #cda85a !important;
+        border: 1.5px solid rgba(205, 168, 90, 0.4) !important;
+    }
+
+    .desktop-floating-call:hover {
+        background-color: #cda85a !important;
+        color: #12181f !important;
+        border-color: #cda85a !important;
+        transform: translateY(-3px) scale(1.08) !important;
+        box-shadow: 0 12px 28px rgba(205, 168, 90, 0.45) !important;
+    }
+
+    .desktop-floating-call:active {
+        transform: translateY(-1px) scale(0.98) !important;
+    }
+
+    .desktop-floating-btn svg {
+        display: block !important;
+        transition: transform 0.2s ease !important;
+    }
+
+    /* Floating Tooltip */
+    .desktop-floating-tooltip {
+        position: absolute !important;
+        right: calc(100% + 12px) !important;
+        top: 50% !important;
+        transform: translateY(-50%) translateX(6px) !important;
+        background-color: #11161d !important;
+        color: #ffffff !important;
+        padding: 6px 12px !important;
+        border-radius: 6px !important;
+        font-family: var(--tp-theme-font, "Inter Tight", sans-serif) !important;
+        font-size: 13px !important;
+        font-weight: 600 !important;
+        letter-spacing: 0.2px !important;
+        white-space: nowrap !important;
+        pointer-events: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3) !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        transition: opacity 0.2s ease, transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.2s ease !important;
+    }
+
+    .desktop-floating-tooltip::after {
+        content: "" !important;
+        position: absolute !important;
+        left: 100% !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        border-width: 5px !important;
+        border-style: solid !important;
+        border-color: transparent transparent transparent #11161d !important;
+    }
+
+    .desktop-floating-btn:hover .desktop-floating-tooltip {
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: translateY(-50%) translateX(0) !important;
+    }
+}
+
+
+
+

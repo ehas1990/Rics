@@ -327,7 +327,10 @@ textarea:focus::placeholder {
   opacity: 1;
   font-weight: 500;
 }
-
+.g-3
+{
+  gap:10px;
+}
 /*----------------------------------------*/
 /*  1.2 Common Css Here
 /*----------------------------------------*/
